@@ -8,7 +8,7 @@ public:
   RoutineNode() : Node("routine_node")
   {
     // Inicializa el publisher para /diffbot_base_controller/cmd_vel_unstamped
-    cmd_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/diffbot_base_controller/cmd_vel_unstamped", 10);
+    cmd_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/robot_1/diffbot_base_controller/cmd_vel_unstamped", 10);
 
     // Timer para ejecutar la rutina periódicamente
     timer_ = this->create_wall_timer(
